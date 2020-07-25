@@ -16,12 +16,13 @@ export class SearchComponent implements OnInit {
 
     // add corresponding validators
     this.searchForm = this.fb.group({
-      'searchCountry': [null]
+      searchCountry: [null, Validators.required]
     });
 
     // write a function that calls changeCountryName upon value change in the form
-
+    this.searchForm.get('searchCountry').valueChanges.subscribe(val => {
+      this.service.changeCountryName(val);
+    });
   }
-
 
 }

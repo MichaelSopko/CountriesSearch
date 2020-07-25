@@ -26,7 +26,7 @@ export class ListComponent implements OnInit {
     , "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "South Africa", "South Korea", "Spain", "Sri Lanka", "St Kitts & Nevis", "St Lucia", "St Vincent", "St. Lucia", "Sudan"
     , "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia"
     , "Turkey", "Turkmenistan", "Turks & Caicos", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Venezuela", "Vietnam", "Virgin Islands (US)"
-    , "Yemen", "Zambia", "Zimbabwe"]
+    , "Yemen", "Zambia", "Zimbabwe"];
 
   // add the countries to be shown to this array
   searchCountriesList: string[];
@@ -38,7 +38,7 @@ export class ListComponent implements OnInit {
     this.service.currentCountryName.subscribe(name => {
       // complete this function which searches the countries and adds them to searchCountriesList
       // the search criteria: country must start with the entered string, case INSENSITIVE
-  
+      this.searchCountriesList = this.countries.filter(country => country.toUpperCase().startsWith(name.toUpperCase()));
     });
 
   }

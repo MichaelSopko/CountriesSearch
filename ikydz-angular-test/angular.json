@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ikydz-angular-test"
+    }
+  },
+  "defaultProject": "ikydz-angular-test",
+  "cli": {
+    "analytics": "4dc96959-544e-4cde-a73f-252d99949e3a"
+  }
 }
